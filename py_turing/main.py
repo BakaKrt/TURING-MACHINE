@@ -1,18 +1,14 @@
 import flet as ft
 from Machine import Machine
 
-#click_first = False
 main_color_1 = "#1abc9c"
 main_color_2 = "#d35400"
 main_color_3 = "#34495e"
-#main_color_3 = "#6E6C78"
 
 
 def main(page: ft.Page):
-    #page.bgcolor = "#3B3A3D"
     machine = Machine()
     
-    #
     
     def GLOBAL_INFO_MACHINE():
         machine.set_word(lenta_from_user.value)
@@ -20,7 +16,6 @@ def main(page: ft.Page):
         a = machine.start_machine()
         return a
     
-    #
     
     right_column_lenta = ft.Text(
         value="Тут будет какое-то значение после запуска машины",
