@@ -1,14 +1,18 @@
 import flet as ft
 from Machine import Machine
 
+#main_color_1 = "#1abc9c"
+#main_color_2 = "#d35400"
+#main_color_3 = "#34495e"
+
 main_color_1 = "#1abc9c"
-main_color_2 = "#d35400"
-main_color_3 = "#34495e"
+main_color_2 = "#7aa899"
+main_color_3 = "#6e6c78"
 
 
 def main(page: ft.Page):
     machine = Machine()
-    
+    page.bgcolor = "#3b3a3d"
     
     def GLOBAL_INFO_MACHINE():
         machine.set_word(lenta_from_user.value)
@@ -19,9 +23,10 @@ def main(page: ft.Page):
     
     right_column_lenta = ft.Text(
         value="Тут будет какое-то значение после запуска машины",
-        size=20,
+        size=25,
         bgcolor=ft.colors.TRANSPARENT,
         text_align=ft.TextAlign.CENTER,
+        selectable=True,
     )
     
     right_column_lenta_field = ft.Container(
@@ -182,7 +187,7 @@ def main(page: ft.Page):
                         ft.Row(controls=[
                             ft.Container(width=20,bgcolor=ft.colors.TRANSPARENT),
                             ft.Container(content=ft.Container(content=
-                                ft.Text("Пример 1",size=25,text_align=ft.TextAlign.CENTER,color=ft.colors.WHITE),
+                                ft.Text("Пример 1",size=25,text_align=ft.TextAlign.CENTER,color="#27263D"),
                                 alignment=ft.alignment.center
                             ),
                             width=130,
@@ -192,7 +197,7 @@ def main(page: ft.Page):
                             on_click=lambda e: (primer1())
                         ),
                         ft.Container(content=ft.Container(content=
-                                ft.Text("Пример 2",size=25,text_align=ft.TextAlign.CENTER,color=ft.colors.WHITE),
+                                ft.Text("Пример 2",size=25,text_align=ft.TextAlign.CENTER,color="#27263D"),
                                 alignment=ft.alignment.center
                             ),
                             width=130,
@@ -204,7 +209,7 @@ def main(page: ft.Page):
                         ft.Row(controls=[
                             ft.Container(width=20,bgcolor=ft.colors.TRANSPARENT),
                             ft.Container(content=ft.Container(content=
-                                    ft.Text("Пример 3",size=25,text_align=ft.TextAlign.CENTER,color=ft.colors.WHITE),
+                                    ft.Text("Пример 3",size=25,text_align=ft.TextAlign.CENTER,color="#27263D"),
                                     alignment=ft.alignment.center
                                 ),
                             width=130,
@@ -213,7 +218,7 @@ def main(page: ft.Page):
                             border_radius=10
                             ),
                             ft.Container(content=ft.Container(content=
-                                    ft.Text("Пример 4",size=25,text_align=ft.TextAlign.CENTER,color=ft.colors.WHITE),
+                                    ft.Text("Пример 4",size=25,text_align=ft.TextAlign.CENTER,color="#27263D"),
                                     alignment=ft.alignment.center
                                 ),
                             width=130,
